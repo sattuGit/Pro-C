@@ -3,6 +3,7 @@ This is for Demo connection between C/C++ and Oracle
 
 Links for Refrence :
 http://infolab.stanford.edu/~ullman/fcdb/oracle/or-proc.html
+https://docs.oracle.com/cd/A91202_01/901_doc/appdev.901/a89861/toc.htm
 https://download.oracle.com/otn_hosted_doc/timesten/1122/quickstart/html/developer/proc/proc.html
 
 Processing / Compiling Pro*C  program 
