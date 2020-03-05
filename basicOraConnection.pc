@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <sqlca.h>
+#include <sqlda.h>
+char *uname = "XXXX",*password = "XXXX",*TNS ="XXXX";
+
+int conn(char *un, char *pass, char *conStr){
+    EXEC SQL CONNECT :uname IDENTIFIED  BY :password USING :TNS ;
+    printf("%d\n",sqlca.sqlcode);
+    return (sqlca.sqlcode);
+}
+void main()
+{ 
+    int rORACode=-999,data;
+    rORACode=conn(uname,password,TNS);
+    if(rORACode!=0){ 
+        printf("Connection Error: Error Code is :%d ",rORACode); 
+        return ;
+    }
+    EXEC SQL select 1+1 into :data from dual ;
+    printf("%d",data);
+}
