@@ -30,6 +30,27 @@ for Example :
      g++ simpleCompileC.cpp -I$ORACLE_HOME/precomp/public -l $ORACLE_HOME/lib -lclntsh -o a.out
      -I for include path , -l for compile time binding(early binding) 
 
+Practical:
+
+     /tmp/sattu/proC$ gcc --version 
+     gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-16)
+     Copyright (C) 2010 Free Software Foundation, Inc.
+     This is free software; see the source for copying conditions.  There is NO
+     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+     tmp/sattu/proC$ uname -a
+     Linux <hostname> 2.6.32-754.25.1.el6.x86_64 #1 SMP <TIME> 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+     proc simpleCompileC.pc 
+     gcc -o outExe -I $ORACLE_HOME/precomp/public -L /app/ora/local/product/11.2.0.4/client_1/lib/ -l clntsh simpleCompileC.c 
+
+     /tmp/sattu/proC$ getconf LONG_BIT
+     64
+     /tmp/sattu/proC$ arch
+     x86_64
+     /tmp/sattu/proC$ 
+
+
 Rules for Pro*C
 ---------------------------------------------
 1) You can write sql execution block anywhere in c/c++ program, but it should be valid sql block i.e. its start from "EXEC" and end with ";" semicolon 
