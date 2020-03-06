@@ -49,6 +49,15 @@ Practical:
      /tmp/sattu/proC$ arch
      x86_64
      /tmp/sattu/proC$ 
+     
+     create table for testing in dbms (for me its oracle 12)
+     create table testPROC (
+     fname char(30),
+     lname varchar2(30),
+     ind int,
+     intrest float
+     );
+
 
 
 Rules for Pro*C
